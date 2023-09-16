@@ -3,7 +3,9 @@ import { CreatePurchaseDto } from './dto/create-purchase.dto';
 
 @Injectable()
 export class PurchaseService {
+  private purshase = [];
   create(createPurchaseDto: CreatePurchaseDto) {
-    return 'This action adds a new purchase';
+    this.purshase.push(createPurchaseDto);
+    return createPurchaseDto;
   }
 }

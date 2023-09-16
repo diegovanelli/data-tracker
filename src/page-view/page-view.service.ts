@@ -3,7 +3,9 @@ import { CreatePageViewDto } from './dto/create-page-view.dto';
 
 @Injectable()
 export class PageViewService {
+  private pageView = [];
   create(createPageViewDto: CreatePageViewDto) {
-    return 'This action adds a new pageView';
+    this.pageView.push(createPageViewDto);
+    return createPageViewDto;
   }
 }
