@@ -1,4 +1,4 @@
-import { IsNotEmpty } from "class-validator";
+import { IsNotEmpty } from 'class-validator';
 
 export class CreatePageViewDto {
   @IsNotEmpty({ message: 'O page não pode ser vazio' })
